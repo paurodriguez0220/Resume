@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
 
 * {
@@ -12,26 +12,28 @@
 }
 
 .resume {
+  font-family: var(--main-font);
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: 300px;
 }
 
 .goggles-container {
-  display: flex;
   width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 20%;
+  position: fixed;
 }
 
 .goggles-container span {
   font-size: 80px;
   font-weight: 600;
   margin-bottom: 40px;
+  cursor: context-menu;
 }
 
 .goggles-container span .blue-label {
@@ -61,7 +63,7 @@
   align-items: center;
   padding: 10px 20px;
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .goggles-search-bar i {
@@ -70,7 +72,7 @@
 }
 
 .goggles-search-bar .typewriter h1 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   overflow: hidden;
   border-right: 0.15em solid #000;
@@ -111,6 +113,7 @@
 }
 
 .websites-list .list-tem-container {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,11 +123,16 @@
   border-radius: 5px;
 }
 
+.websites-list .list-tem-container:hover {
+  background-color: #e8e8e9;
+}
+
 .websites-list .circle-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f2f2;
+  color: #050505;
+  background-color: #f1f3f4;
   width: 50px;
   height: 50px;
   border-radius: 50%;

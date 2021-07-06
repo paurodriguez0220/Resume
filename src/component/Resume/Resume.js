@@ -15,13 +15,13 @@ function Resume() {
             </span>
             <div className="goggles-search-bar">
               <i className="fas fa-search"></i>
-              <div class="typewriter">
+              <div className="typewriter">
                 <h1>Paulo G. Rodriguez</h1>
               </div>
               <img alt="search" src={process.env.PUBLIC_URL + '/Google_Microphone_Icon.png'} />
             </div>
             <div className="websites-list">
-                <div className="list-tem-container">
+                <div className="list-tem-container" alt="Paulo Rodriguez">
                   <div className="circle-container">
                     <img alt="search" src={process.env.PUBLIC_URL + '/Google_Icon.svg'} />
                   </div>
@@ -29,13 +29,13 @@ function Resume() {
                 </div>
                 <div className="list-tem-container">
                   <div className="circle-container linkeIn">
-                    <i class="fab fa-linkedin" alt="LinkedIn"></i>
+                    <i className="fab fa-linkedin" alt="LinkedIn"></i>
                   </div>
                   LinkedIn
                 </div>
                 <div className="list-tem-container">
                   <div className="circle-container github">
-                    <i class="fab fa-github" alt="GitHub"></i>
+                    <i className="fab fa-github" alt="GitHub"></i>
                   </div>
                   Github
                 </div>
@@ -47,7 +47,7 @@ function Resume() {
                 </div>
                 <div className="list-tem-container">
                   <div className="circle-container cloud_download">
-                    <i class="fas fa-cloud-download-alt"  alt="Resume"></i>
+                    <i className="fas fa-cloud-download-alt"  alt="Resume"></i>
                   </div>
                   Resume
                 </div>
