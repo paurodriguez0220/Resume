@@ -1,12 +1,14 @@
 import './Google.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as userDetailsAction from '../../redux/actions/User/UserDetailsAction';
 
-function GoogleSearch() {
-
+function GoogleSearch(prop) {
     const navigateToLink = (websiteUrl) => {
         const newWindow = window.open(websiteUrl, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
     }
-
+    console.log(prop);
     return (
       <div className="google-search">
           <div className="goggles-container">
@@ -22,7 +24,7 @@ function GoogleSearch() {
             <div className="goggles-search-bar">
               <i className="fas fa-search"></i>
               <div className="typewriter">
-                <h1>Paulo G. Rodriguez</h1>
+                <h1>{prop.userDetails.Firstname + ' ' + prop.userDetails.Lastname}</h1>
               </div>
               <img alt="search" src={process.env.PUBLIC_URL + '/Google_Microphone_Icon.png'} />
             </div>
@@ -45,12 +47,12 @@ function GoogleSearch() {
                   </div>
                   Github
                 </div>
-                <div className="list-tem-container">
+                <a className="list-tem-container" href = "mailto:abc@example.com">
                   <div className="circle-container">
                     <img alt="search" src={process.env.PUBLIC_URL + '/Gmail_Icon.svg'} />
                   </div>
                   Mail
-                </div>
+                </a>
                 <div className="list-tem-container">
                   <div className="circle-container cloud_download">
                     <i className="fas fa-cloud-download-alt"  alt="Resume"></i>
@@ -63,4 +65,14 @@ function GoogleSearch() {
     );
   }
   
-  export default GoogleSearch;
+  const mapStateToProps = (state, ownProps) =>{
+    return{
+      userDetails: state.userReducer,
+    };
+  }
+
+  const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ userDetailsAction }, dispatch)
+  }
+
+  export default connect(mapStateToProps, mapDispatchToProps)(GoogleSearch);
