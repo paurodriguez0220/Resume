@@ -19,7 +19,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router basename={'/resume'}>
-      <Route exact path="/">
+      <Route path="/">
           <Redirect to="/gogglesearch" />
       </Route>
       <Route path="/gogglesearch" component={GogglesSearch} />

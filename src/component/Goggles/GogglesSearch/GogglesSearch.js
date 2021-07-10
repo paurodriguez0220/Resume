@@ -1,9 +1,9 @@
 import './GogglesSearch.css';
-import GogglesSearchLogo from './GogglesSearchLogo';
+import GogglesSearchLogo from '../GogglesSearchLogo';
 import GogglesSearchBar from './GogglesSearchBar';
 import GogglesSearchWebList from './GogglesSearchWebList';
 
-function GogglesSearch(prop) {
+function GogglesSearch() {
     return (
       <div className="goggles-search">
           <div className="goggles-container">
