@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import * as gogglesAction from '../../../redux/actions/Goggles/GogglesAction';
+import { Link } from 'react-router-dom';
 
 function GogglesSearchWebList(prop) {
     return(
         <div className="websites-list">
-        <div className="list-tem-container" onClick={() => { prop.NavigateToLink('/gogglesresult')}} title="Get to know me">
+        <Link className="list-tem-container" to="/gogglesresult" title="Get to know me">
           <div className="circle-container">
             <img alt="search" src={process.env.PUBLIC_URL + '/Google_Icon.svg'} />
           </div>
           Google
-        </div>
+        </Link>
         <div className="list-tem-container" onClick={() => { prop.NavigateToOutsideLink(prop.userDetails.LinkedInUrl)}} title="View my LinkedIn account">
           <div className="circle-container linkeIn">
             <i className="fab fa-linkedin" alt="LinkedIn"></i>

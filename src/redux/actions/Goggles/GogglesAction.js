@@ -1,16 +1,14 @@
-import { useHistory } from 'react-router-dom';
+import { GOGGLESCONST } from '../../../constants';
 
 export const GetGogglesWebsiteList = () =>{
     return 1;
 }
 
 export const NavigateToOutsideLink = (websiteUrl) => {
-    const newWindow = window.open(websiteUrl, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
-}
+    return function(dispatch){
+        const newWindow = window.open(websiteUrl, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
 
-
-export const NavigateToLink = (websiteUrl) => {
-    const history  = useHistory();
-    history.push(websiteUrl);
+        dispatch({type: GOGGLESCONST.NAVIGATE_TO_OUTSIDE});
+    };
 }
