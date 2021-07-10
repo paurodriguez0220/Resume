@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import rootReducer from './redux/reducers/index';
-import GoogleSearch from './component/Google/Google';
+import GogglesSearch from './component/Goggles/GogglesSearch/GogglesSearch';
 
 const store = createStore(
   rootReducer,
@@ -16,7 +16,8 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <Router basename={'/resume'}>
-      <Route path="/" component={GoogleSearch} />
+      <Route path="/" component={GogglesSearch} />
+      <Route path="/gogglesresult" component={GogglesSearch} />
     </Router>
   </Provider>,
   document.getElementById('root')

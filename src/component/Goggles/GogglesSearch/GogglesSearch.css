@@ -1,4 +1,4 @@
-.google-search {
+.goggles-search {
   font-family: var(--main-font);
   min-height: 100vh;
   min-width: 100vw;
@@ -145,4 +145,9 @@
 
 .websites-list .cloud_download {
   color: #74c0fc;
+}
+
+.websites-list a {
+  color: inherit;
+  text-decoration: inherit;
 }
